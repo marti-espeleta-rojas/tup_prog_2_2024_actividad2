@@ -14,12 +14,15 @@ namespace ActividadEnElAula2
 
         public Policia (int dni, string nombre, int numeroPlaca)
         {
-
+            DNI = dni;
+            Nombre=nombre;
+            NumeroPlaca = numeroPlaca; 
         }
 
         public string VerDatos()
         {
-
+            string datos = $"DNI: {DNI}, Nombre: {Nombre}, Numero de Placa: {NumeroPlaca}";
+            return datos;
         }
     }
 }

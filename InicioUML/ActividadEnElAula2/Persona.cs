@@ -13,12 +13,14 @@ namespace ActividadEnElAula2
 
         public Persona (int dni, string nombre)
         {
-            
+            DNI = dni;
+            Nombre = nombre;
         }
 
         public string VerDatos()
         {
-
+            string datos = $"DNI: {DNI}, Nombre: {Nombre}";
+            return datos;
         }
     }
 }

@@ -10,13 +10,21 @@ namespace ActividadEnElAula2
     {
         public int HoraDesde { get; private set; }
         public int MinutoDesde { get; private set; }
-        public int HoraHaste { get; private set; }
+        public int HoraHasta { get; private set; }
         public int MinutoHasta { get; private set; }
         public int CantidadMinutos { get; private set; }
+        public Policia OficialAsignado { get; private set; }
 
-        public void AsignarPolicia(Policia poli, int h, int m, int cantM)
+        public Guardia()
         {
 
+        }
+        public void AsignarPolicia(Policia poli, int h, int m, int cantM)
+        {
+            OficialAsignado = poli;
+            HoraDesde = h;
+            MinutoDesde = m;
+            CantidadMinutos = cantM;
         }
 
     }
