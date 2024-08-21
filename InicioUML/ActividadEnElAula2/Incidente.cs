@@ -23,7 +23,8 @@ namespace ActividadEnElAula2
         }
         public string VerDescripcion()
         {
-            string descripcion = $""
+            string descripcion = $"Oficial a cargo: {OficialACargo}, Sujeto: {Sujeto}, Tipo Incidente: {TipoIncidente}";
+            return descripcion;
         }
     }
 }

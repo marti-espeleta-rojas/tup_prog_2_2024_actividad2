@@ -14,6 +14,7 @@ namespace ActividadEnElAula2
         private ArrayList incidentes;
         private Policia[] agentes = new Policia[2];
         private Guardia[] guardias;
+        private Guardia guardia;
         int contGuardias = 0;
         int cantPoli = 0;
         public Comisaria()
@@ -46,9 +47,12 @@ namespace ActividadEnElAula2
             Incidente nueva = new Incidente(agente, sujeto, tipoIncidente);
             incidentes.Add(nueva);
         }
-        public void AsignarGuardia(int numero, int h1, int m1, int tiempoMinutos, string agente)
+        public void AsignarGuardia(int numero, int h1, int m1, int tiempoMinutos, Policia agente)
         {
-            guardias[contGuardias++];
+            guardia = new Guardia();
+            guardias[numero] = guardia;
+            guardia.AsignarPolicia(agente, h1, m1, tiempoMinutos);
+
         }
         public Incidente VerIncidente(int idx)
         {
