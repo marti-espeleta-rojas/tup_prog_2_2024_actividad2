@@ -41,26 +41,32 @@
             this.tbPersona = new System.Windows.Forms.TextBox();
             this.tbDNI = new System.Windows.Forms.TextBox();
             this.lbDNI = new System.Windows.Forms.Label();
-            this.dmdHoraMinuto = new System.Windows.Forms.DomainUpDown();
-            this.dmdHoraHora = new System.Windows.Forms.DomainUpDown();
             this.cbxTipoIncidente = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.gbxAdministracionGuardias = new System.Windows.Forms.GroupBox();
-            this.dmdDesdeMinuto = new System.Windows.Forms.DomainUpDown();
-            this.dmdDuracion = new System.Windows.Forms.DomainUpDown();
-            this.dmdDesdeHora = new System.Windows.Forms.DomainUpDown();
-            this.dmdNroGuardia = new System.Windows.Forms.DomainUpDown();
             this.btnAsignaciondeGuardias = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.nmNroGuardia = new System.Windows.Forms.NumericUpDown();
+            this.nmHoraDesde = new System.Windows.Forms.NumericUpDown();
+            this.nmMinutoDesde = new System.Windows.Forms.NumericUpDown();
+            this.nmDuracion = new System.Windows.Forms.NumericUpDown();
+            this.nmHoraHora = new System.Windows.Forms.NumericUpDown();
+            this.nmHoraMinuto = new System.Windows.Forms.NumericUpDown();
             this.gbxAdministracionComisaria.SuspendLayout();
             this.gbxOperacionesAgente.SuspendLayout();
             this.gbxAdministracionIncidentes.SuspendLayout();
             this.gbxAdministracionGuardias.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmNroGuardia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmHoraDesde)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmMinutoDesde)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmDuracion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmHoraHora)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmHoraMinuto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -157,13 +163,13 @@
             // 
             // gbxAdministracionIncidentes
             // 
+            this.gbxAdministracionIncidentes.Controls.Add(this.nmHoraMinuto);
+            this.gbxAdministracionIncidentes.Controls.Add(this.nmHoraHora);
             this.gbxAdministracionIncidentes.Controls.Add(this.btnRegistrarIncidente);
             this.gbxAdministracionIncidentes.Controls.Add(this.tbMotivo);
             this.gbxAdministracionIncidentes.Controls.Add(this.tbPersona);
             this.gbxAdministracionIncidentes.Controls.Add(this.tbDNI);
             this.gbxAdministracionIncidentes.Controls.Add(this.lbDNI);
-            this.gbxAdministracionIncidentes.Controls.Add(this.dmdHoraMinuto);
-            this.gbxAdministracionIncidentes.Controls.Add(this.dmdHoraHora);
             this.gbxAdministracionIncidentes.Controls.Add(this.cbxTipoIncidente);
             this.gbxAdministracionIncidentes.Controls.Add(this.label8);
             this.gbxAdministracionIncidentes.Controls.Add(this.label7);
@@ -216,22 +222,6 @@
             this.lbDNI.TabIndex = 7;
             this.lbDNI.Text = "DNI";
             // 
-            // dmdHoraMinuto
-            // 
-            this.dmdHoraMinuto.Location = new System.Drawing.Point(160, 56);
-            this.dmdHoraMinuto.Name = "dmdHoraMinuto";
-            this.dmdHoraMinuto.Size = new System.Drawing.Size(69, 20);
-            this.dmdHoraMinuto.TabIndex = 6;
-            this.dmdHoraMinuto.Text = "domainUpDown2";
-            // 
-            // dmdHoraHora
-            // 
-            this.dmdHoraHora.Location = new System.Drawing.Point(108, 55);
-            this.dmdHoraHora.Name = "dmdHoraHora";
-            this.dmdHoraHora.Size = new System.Drawing.Size(45, 20);
-            this.dmdHoraHora.TabIndex = 5;
-            this.dmdHoraHora.Text = "domainUpDown1";
-            // 
             // cbxTipoIncidente
             // 
             this.cbxTipoIncidente.FormattingEnabled = true;
@@ -281,10 +271,10 @@
             // 
             // gbxAdministracionGuardias
             // 
-            this.gbxAdministracionGuardias.Controls.Add(this.dmdDesdeMinuto);
-            this.gbxAdministracionGuardias.Controls.Add(this.dmdDuracion);
-            this.gbxAdministracionGuardias.Controls.Add(this.dmdDesdeHora);
-            this.gbxAdministracionGuardias.Controls.Add(this.dmdNroGuardia);
+            this.gbxAdministracionGuardias.Controls.Add(this.nmDuracion);
+            this.gbxAdministracionGuardias.Controls.Add(this.nmMinutoDesde);
+            this.gbxAdministracionGuardias.Controls.Add(this.nmHoraDesde);
+            this.gbxAdministracionGuardias.Controls.Add(this.nmNroGuardia);
             this.gbxAdministracionGuardias.Controls.Add(this.btnAsignaciondeGuardias);
             this.gbxAdministracionGuardias.Controls.Add(this.label4);
             this.gbxAdministracionGuardias.Controls.Add(this.label3);
@@ -295,38 +285,6 @@
             this.gbxAdministracionGuardias.TabIndex = 0;
             this.gbxAdministracionGuardias.TabStop = false;
             this.gbxAdministracionGuardias.Text = "Administración de Guardias";
-            // 
-            // dmdDesdeMinuto
-            // 
-            this.dmdDesdeMinuto.Location = new System.Drawing.Point(160, 48);
-            this.dmdDesdeMinuto.Name = "dmdDesdeMinuto";
-            this.dmdDesdeMinuto.Size = new System.Drawing.Size(69, 20);
-            this.dmdDesdeMinuto.TabIndex = 7;
-            this.dmdDesdeMinuto.Text = "domainUpDown1";
-            // 
-            // dmdDuracion
-            // 
-            this.dmdDuracion.Location = new System.Drawing.Point(108, 74);
-            this.dmdDuracion.Name = "dmdDuracion";
-            this.dmdDuracion.Size = new System.Drawing.Size(120, 20);
-            this.dmdDuracion.TabIndex = 6;
-            this.dmdDuracion.Text = "domainUpDown3";
-            // 
-            // dmdDesdeHora
-            // 
-            this.dmdDesdeHora.Location = new System.Drawing.Point(108, 47);
-            this.dmdDesdeHora.Name = "dmdDesdeHora";
-            this.dmdDesdeHora.Size = new System.Drawing.Size(45, 20);
-            this.dmdDesdeHora.TabIndex = 5;
-            this.dmdDesdeHora.Text = "domainUpDown2";
-            // 
-            // dmdNroGuardia
-            // 
-            this.dmdNroGuardia.Location = new System.Drawing.Point(108, 20);
-            this.dmdNroGuardia.Name = "dmdNroGuardia";
-            this.dmdNroGuardia.Size = new System.Drawing.Size(120, 20);
-            this.dmdNroGuardia.TabIndex = 4;
-            this.dmdNroGuardia.Text = "domainUpDown1";
             // 
             // btnAsignaciondeGuardias
             // 
@@ -365,6 +323,78 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nro Guardia";
             // 
+            // nmNroGuardia
+            // 
+            this.nmNroGuardia.Location = new System.Drawing.Point(109, 20);
+            this.nmNroGuardia.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.nmNroGuardia.Name = "nmNroGuardia";
+            this.nmNroGuardia.Size = new System.Drawing.Size(120, 20);
+            this.nmNroGuardia.TabIndex = 8;
+            // 
+            // nmHoraDesde
+            // 
+            this.nmHoraDesde.Location = new System.Drawing.Point(109, 46);
+            this.nmHoraDesde.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.nmHoraDesde.Name = "nmHoraDesde";
+            this.nmHoraDesde.Size = new System.Drawing.Size(59, 20);
+            this.nmHoraDesde.TabIndex = 9;
+            // 
+            // nmMinutoDesde
+            // 
+            this.nmMinutoDesde.Location = new System.Drawing.Point(175, 45);
+            this.nmMinutoDesde.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.nmMinutoDesde.Name = "nmMinutoDesde";
+            this.nmMinutoDesde.Size = new System.Drawing.Size(54, 20);
+            this.nmMinutoDesde.TabIndex = 10;
+            // 
+            // nmDuracion
+            // 
+            this.nmDuracion.Location = new System.Drawing.Point(108, 74);
+            this.nmDuracion.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.nmDuracion.Name = "nmDuracion";
+            this.nmDuracion.Size = new System.Drawing.Size(120, 20);
+            this.nmDuracion.TabIndex = 11;
+            // 
+            // nmHoraHora
+            // 
+            this.nmHoraHora.Location = new System.Drawing.Point(108, 56);
+            this.nmHoraHora.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.nmHoraHora.Name = "nmHoraHora";
+            this.nmHoraHora.Size = new System.Drawing.Size(59, 20);
+            this.nmHoraHora.TabIndex = 12;
+            // 
+            // nmHoraMinuto
+            // 
+            this.nmHoraMinuto.Location = new System.Drawing.Point(173, 56);
+            this.nmHoraMinuto.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.nmHoraMinuto.Name = "nmHoraMinuto";
+            this.nmHoraMinuto.Size = new System.Drawing.Size(54, 20);
+            this.nmHoraMinuto.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,6 +412,12 @@
             this.gbxAdministracionIncidentes.PerformLayout();
             this.gbxAdministracionGuardias.ResumeLayout(false);
             this.gbxAdministracionGuardias.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmNroGuardia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmHoraDesde)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmMinutoDesde)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmDuracion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmHoraHora)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmHoraMinuto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,9 +433,6 @@
         private System.Windows.Forms.Button btnCreacionComisaria;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxPlacadeAgente;
-        private System.Windows.Forms.DomainUpDown dmdDuracion;
-        private System.Windows.Forms.DomainUpDown dmdDesdeHora;
-        private System.Windows.Forms.DomainUpDown dmdNroGuardia;
         private System.Windows.Forms.Button btnAsignaciondeGuardias;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -409,14 +442,17 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DomainUpDown dmdHoraMinuto;
-        private System.Windows.Forms.DomainUpDown dmdHoraHora;
-        private System.Windows.Forms.DomainUpDown dmdDesdeMinuto;
         private System.Windows.Forms.Button btnRegistrarIncidente;
         private System.Windows.Forms.TextBox tbMotivo;
         private System.Windows.Forms.TextBox tbPersona;
         private System.Windows.Forms.TextBox tbDNI;
         private System.Windows.Forms.Label lbDNI;
+        private System.Windows.Forms.NumericUpDown nmHoraMinuto;
+        private System.Windows.Forms.NumericUpDown nmHoraHora;
+        private System.Windows.Forms.NumericUpDown nmDuracion;
+        private System.Windows.Forms.NumericUpDown nmMinutoDesde;
+        private System.Windows.Forms.NumericUpDown nmHoraDesde;
+        private System.Windows.Forms.NumericUpDown nmNroGuardia;
     }
 }
 
