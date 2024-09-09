@@ -23,7 +23,16 @@ namespace ActividadEnElAula2
         }
         public string VerDescripcion()
         {
-            string descripcion = $""
+            string descripcion;
+            if (TipoIncidente == 0)
+            {
+                descripcion = $"Denuncia Policial Emitida a las: {Hora}:{Minuto} Oficial a cargo: {OficialACargo.Nombre}, Sujeto a arrestar: {Sujeto.Nombre}, DNI del arrestado: {Sujeto.DNI} Tipo Incidente: {TipoIncidente}, Motivo: {Motivo}";
+            }
+            else
+            {
+                descripcion = $"Orden de Arresto Emitida a las: {Hora}:{Minuto} Oficial a cargo: {OficialACargo.Nombre}, Sujeto a arrestar: {Sujeto.Nombre}, DNI del arrestado: {Sujeto.DNI} Tipo Incidente: {TipoIncidente}, Motivo: {Motivo}";
+            }
+            return descripcion;
         }
     }
 }

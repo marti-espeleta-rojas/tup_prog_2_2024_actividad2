@@ -53,6 +53,7 @@ namespace ActividadEnElAula2
         }
         public void AsignarGuardia(int numero, int h1, int m1, int tiempoMinutos, Policia agente)
         {
+<<<<<<< HEAD
             guardia = new Guardia();
             guardia.AsignarPolicia(agente, h1, m1, tiempoMinutos);
             guardias[numero]= guardia;
@@ -62,6 +63,21 @@ namespace ActividadEnElAula2
             Incidente incidente;
             incidente = incidentes[idx];
             return incidente;
+=======
+            int i = 0;
+            guardia = new Guardia();
+            guardia = guardias[i++];
+            guardia.AsignarPolicia(agente, h1, m1, tiempoMinutos);
+
+        }
+        public Incidente VerIncidente(int idx)
+        {
+            if (idx>=0 && idx < CantidadIncidentes)
+            {
+                return incidentes[idx] as Incidente;
+            }
+            return null;
+>>>>>>> a19ba4619dfe9d74c78e6fedfcc06658b34a8a71
         }
     }
 }
