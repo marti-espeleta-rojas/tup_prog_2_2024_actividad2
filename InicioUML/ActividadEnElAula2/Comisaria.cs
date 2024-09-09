@@ -14,6 +14,7 @@ namespace ActividadEnElAula2
         private ArrayList incidentes;
         private Policia[] agentes = new Policia[2];
         private Guardia[] guardias;
+        private Guardia guardia;
         int contGuardias = 0;
         int cantPoli = 0;
         public Comisaria()
@@ -44,15 +45,23 @@ namespace ActividadEnElAula2
         public void RegistrarIncidente(Policia agente, Persona sujeto, string motivo, int h, int m, int tipoIncidente)
         {
             Incidente nueva = new Incidente(agente, sujeto, tipoIncidente);
+            nueva.Motivo = motivo;
+            nueva.Hora = h;
+            nueva.Minuto = m;
             incidentes.Add(nueva);
+            CantidadIncidentes++;
         }
-        public void AsignarGuardia(int numero, int h1, int m1, int tiempoMinutos, string agente)
+        public void AsignarGuardia(int numero, int h1, int m1, int tiempoMinutos, Policia agente)
         {
-            guardias[contGuardias++];
+            guardia = new Guardia();
+            guardia.AsignarPolicia(agente, h1, m1, tiempoMinutos);
+            guardias[numero]= guardia;
         }
         public Incidente VerIncidente(int idx)
         {
-
+            Incidente incidente;
+            incidente = incidentes[idx];
+            return incidente;
         }
     }
 }
